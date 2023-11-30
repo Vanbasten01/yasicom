@@ -1,0 +1,60 @@
+{% extends "tst.html" %}
+{% block title %}
+    YasiCom.
+{% endblock title %}
+
+{% block content %}
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option" id="products" style="background-color:white;padding:20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__text">
+                    <h4 style="color:dark;font-weight: bolder;">Products</h4>
+                    <div class="breadcrumb__links">
+			<a href="/home" style="color: black; text-decoration: none; font-weight: bolder;">Home</a>
+			<span style="color:dark;font-weight: bold;"> > Products</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+
+
+<div class="container-fluid" style="background: #fafafa; padding: 100px 10px 100px 85px;">
+    {% if products %}
+        {% for i in range(0, length, 4) %}
+            <div class="row">
+                {% for product in products[i:i+4] %}
+                    <div class="col-md-3 col-6">
+			    <div class="product" style="margin-right: 70px; margin-bottom: 70px;">
+                            <!-- Set a fixed height for the image container -->
+                            <div style="height: 100%; overflow: hidden;margin-bottom: 10px;">
+                                <!-- Apply object-fit to control image resizing -->
+				<a href="products/{{ product.product_id }}">
+                                <img src="{{ product.cover }}" alt="{{ product.name }} Image" style="max-width: 100%; height: 100%; object-fit: cover; margin-bottom: 12px;">
+				</a>
+			    </div>
+			    <div>
+                            <span style="font-weight: bold; font-size: 20px;">{{ product.name }}</span>
+			    </div>
+
+			        <span style="color: red; font-weight: bold; font-size: 20px;">Now  <h5 style="display: inline; color: black;">${{ product.cost }}</h5></span>
+			     <h5 style="text-decoration: line-through">${{ product.cost * 2 }}</h5>
+
+			    </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+
+
+
+
+{% endblock %}

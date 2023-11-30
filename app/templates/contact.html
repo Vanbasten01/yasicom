@@ -1,0 +1,78 @@
+{% extends "tst.html" %}
+{% block title %}
+    YasiCom.
+{% endblock title %}
+
+{% block content %}
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option" id="contact" style="background-color:white;padding:20px; margin-top: -75px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__text">
+                    <h4 style="color:dark;font-weight: bolder;">Contacts</h4>
+                    <div class="breadcrumb__links">
+			<a href="/home" style="color: black; text-decoration: none; font-weight: bolder;">Home</a>
+			<span style="color:dark;font-weight: bold;"> > Contacts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+
+<!-- Contact Section Begin -->
+<section class="contact spad" style="background-color: white; padding: 40px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="contact__text" style="margin: 0 100px 0 -100px">
+                    <div class="section-title">
+                        <span class="section-title__sub" style="font-weight: bold; font-size: 18px; color: #006400;" >Contact Information</span>
+                    </div>
+                    <ul class="contact-info">
+                        <li>
+                        	<span class="section-title__sub" style="font-weight: bold; font-size: 17px" >United States</span>
+                            <p>123 Main Street, Suite 456, Cityville, CA 12345 <br />+1 (555) 123-4567</p>
+                        </li>
+                        <li>
+                        	<span class="section-title__sub" style="font-weight: bold; font-size: 17px" >France</span>
+                            <p>456 Rue de la Paix, 75001 Paris <br />+33 1 23 45 67 89</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="contact__form">
+                    <form action="#" class="contact-form">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" placeholder="Your Name" class="form-input"  style="width: calc(100% - 2px);margin-top: 20px">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" placeholder="Your Email" class="form-input"  style="width: calc(100%); margin-top: 20px">
+                            </div>
+                            <div class="col-lg-12">
+                                <textarea placeholder="Your Message" class="form-textarea" style="height: 120px; width: 100%; margin-bottom: 20px;margin-top:20px"></textarea>
+				<button type="submit" class="site-btn" style="display: block; width: 100%; background-color: #009000; color: white; font-weight: bolder;height: 40px;">Send Message</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends "tst.html" %}
+
+
+{% block title %}
+    YasiCom || Checkout
+{% endblock %}
+
+
+{% block styles %}
+<style>
+    .site-btn:hover {
+        background-color: white;
+        color: #009000;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+
+    <section class="checkout spad" style="margin-top: -100px; margin-bottom: 20px; background-color: white;">
+        <div class="container">
+            <div class="checkout__form">
+                <form action="{{ url_for('routes.checkout', product_id=product.product_id, quantity=quantity) }}" method="POST">
+                    <div class="row" style="padding: 20px;">
+			    <div class="col-lg-8 col-md-6">
+                            <h2 class="checkout__title" style="font-weight: bold;">Billing Details:</h2>
+			     
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="checkout__input">
+                                        <p style="margin-bottom: 3px;font-weight: bold; font-size: 17px;">Fist Name<span style="color:red;">*</span></p>
+                                        <input style="margin-bottom: 15px;font-size: 17px; width: 100%;" placeholder="Your First Name"type="text" name="first_name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="checkout__input">
+                                        <p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">Last Name<span style="color:red;">*</span></p>
+                                        <input style="margin-bottom: 15px;font-size: 17px; width: 100%;"placeholder="Your Last Name" type="text" name="last_name" required>
+                                    </div>
+                                </div>
+                            </div>
+			    <div class="row">
+			    	<div class="col-lg-10">
+                            	   <div class="checkout__input">
+                                	<p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">Country<span style="color:red;">*</span></p>
+                                	<input style="margin-bottom: 15px;font-size: 17px;width: 100%;" placeholder="Your Country"type="text" name="country" required>
+			           </div>
+                            	</div>
+			    </div>
+
+			    <div class="row">
+			    	<div class="col-lg-10">
+                            	    <div class="checkout__input">
+                                	<p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">Address<span style="color:red;">*</span></p>
+                                	<input style="margin-bottom: 15px;font-size: 17px;width: 100%;"placeholder="Your Adress" type="text" name="address" class="checkout__input__add" required>
+                            	    </div>
+				</div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-lg-10">
+                            	    <div class="checkout__input">
+                                	<p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">City<span style="color:red;">*</span></p>
+                                	<input style="margin-bottom: 15px;font-size: 17px; width: 100%;"placeholder="Your City" type="text" name="city" required>
+                            	    </div>
+				</div>
+			    </div>
+
+			    <div class="row">
+			    	<div class="col-lg-10">
+                            	    <div class="checkout__input">
+                                	<p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">Postcode<span style="color:red;">*</span></p>
+                                	<input style="margin-bottom: 15px;font-size: 17px; width: 100%;" placeholder="Your Postcode" type="text" name="postcode" required>
+                            	    </div>
+				</div>
+			    </div>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="checkout__input">
+                                        <p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">Phone Number<span style="color:red;">*</span></p>
+                                        <input style="margin-bottom: 15px;font-size: 17px;width: 100%;"placeholder="Your Phone Number" type="text" name="phone" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="checkout__input">
+                                        <p style="margin-bottom: 3px;font-weight: bold;font-size: 17px;">Email<span style="color:red;">*</span></p>
+                                        <input style="margin-bottom: 15px; font-size: 17px;width: 100%;"placeholder="Your Email" type="text" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mx-auto  d-flex justify-content-center align-items-center" style="margin-top: 20px;background-color: #f0f0f0; padding: 30px;">
+                            <div class="checkout__order text-center">
+				    <ul><h2 class="order__title" style="font-weight: bold;">Order Details:</h2>
+					<li><span style="font-weight: bold; font-size: 18px;">Product:   {{ product.name }}</span></li>
+					<li><span style="font-weight: bold; font-size: 18px;">Cost:      {{ product.cost }}</span></li>
+					<li><span style="font-weight: bold; font-size: 18px;">Quantity:  {{ quantity }}</span></li>  
+				    </ul>
+					    <h4 style="font-weight: bold;">Total:  ${{ product.cost * quantity }}</h4>
+					    <!-- <button type="submit" style="padding: 12px;margin-top: 20px;color: #c4ee9d;font-weight: bold;font-size: 22px; background-color: #009000;border-radius: 10px;" class="site-btn">Place Order</button>-->
+					    <button type="submit"
+        style="padding: 12px; margin-top: 20px; font-weight: bold; font-size: 22px; background-color: #009000; color: #c4ee9d; border-radius: 10px; transition: background-color 0.3s;"
+        onmouseover="this.style.backgroundColor='#009000'; this.style.color='#c4ee9d';"
+        onmouseout="this.style.backgroundColor='white'; this.style.color='#009000';">
+    Place Order
+</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}

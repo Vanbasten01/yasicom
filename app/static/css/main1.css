@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+}
+/* CSS */
+
+
+/* Reset some default styles */
+/*body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Make sure to include this if it's not already present */
+}
+
+
+
+/* Media query for smaller screens (mobile) */
+@media screen and (max-width: 768px) {
+    .offcanvas-menu-wrapper. {
+        /* Styles specific to mobile devices */
+    }
+}
+
+
+/*body {
+  margin: 0;
+}*/
+
+.header__top {
+  background-color: #006400;
+  padding: 10px 0 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header__top__left p {
+  text-decoration: none;
+  color: white;
+  margin-right: 750px;
+  font-weight: bold;
+}
+
+.header__top__right {
+  display: flex;
+  align-items: center;
+}
+
+.signin-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 300px;
+}
+
+
+
+/*-------------------------*/
+.col-lg-6.col-md-6 {
+    padding: 10px;
+    background-color: #228B022;
+}
+
+.header__menu {
+    list-style: none;
+    padding: 0;
+}
+
+.header__menu ul {
+    margin: 0;
+}
+
+.header__menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.header__menu a {
+    text-decoration: none;
+    color: #000; /* Darker color */
+    font-weight: bold; /* Bold text */
+}
+
+.header__menu a:hover {
+    color: #333; /* Darker color on hover */
+}
+/***/
+
+
+
+
+.col-lg-3.col-md-3 {
+    text-align: right;
+}
+
+.header__nav__option {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+
+}
+.header__menu li {
+    display: inline-block;
+    margin-right: 50px; /* Adjust the margin as needed for more space between items */
+}
+
+
+.header__nav__option a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.header__nav__option a img {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-bottom: -4px; /* Adjust the vertical alignment as needed */
+}
+
+.header__nav__option a:hover {
+    color: #006400;
+}
+
+.header__nav__option span {
+    background-color: #008000; /* Adjust the background color as needed */
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+.price {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #006400; /* Set your desired background color */
+    padding: 60px 0;
+    color: white; /* Set text color */
+    bottom: 0;
+    /*position: fixed;*/
+    width: 100%;
+}
+
+/* Footer About */
+.footer__about p {
+    color: white; /* Set text color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Widgets */
+.footer__widget h6 {
+    color: white; /* Set heading color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer__widget ul li a {
+    color: #ddd; /* Set link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Footer Newsletter 
+.footer__newsletter p,
+.footer__newsletter input[type="text"] {
+    color: white;
+}*/
+.footer__newsletter button {
+    background-color: #006400;
+    color: white;
+     /* Adjust the padding to make the button smaller */
+    /*cursor: pointer;*/
+     border: none;
+    padding: 0px 0px; /* Adjust the padding to make the button smaller */
+    cursor: pointer;
+    /*text-decoration: none;
+    font-weight: bold;*/
+}
+.footer__newslatter p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.footer__newslatter input[type="text"] {
+  color: white;
+}
+/* Custom CSS */
+
+.hero__text {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    margin: auto;
+    text-align: center;
+}
+
+.hero__text h6 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #006400; /* Set your desired color */
+}
+
+.hero__text h2 {
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #000; /* Set your desired color */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.hero__text p {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #555; /* Set your desired color */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006400; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #004000; /* Set your desired hover background color */
+}
+
+.hero__social {
+    margin-top: 20px;
+}
+
+.hero__social a {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Set your desired color */
+    margin-right: 15px; /* Adjust the margin as needed */
+}
+
+/* You can add more styles as needed */
+/* main.css */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(200%); /* This will make the icons black */
+}
+.btn-success {
+    background-color: #006400;
+    border-color: #006400;
+}
+
+.btn-success:hover {
+    background-color: #004d00;
+    border-color: #004d00;
+}

@@ -1,0 +1,144 @@
+{% extends "tst.html" %}
+
+{% block title %}
+    YasiCom.
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section Begin -->
+    <section class="hero" style="margin-top: -150px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 d-flex flex-column align-items-start justify-content-center mt-3 ml-1">
+		      <h3 class="text-dark mb-4" style="font-weight: bolder;  margin-top: 30px;">Explore the Future with YasiCom.</h3>
+                    <p class="lead text-dark mb-4"style="font-weight: bolder;">Dive into the future of technology where every device tells a story...YasiCom invites you to explore a world of limitless possibilities in cutting-edge technology."</p>
+		    <a href="{{ url_for('routes.products') }}" class="btn btn-lg" style="font-weight: bolder; color: #c4ee9d; background-color: #009000;">Shop now <span class="arrow_right"></span></a>
+                </div>
+                <!-- Images Section -->
+                <div class="col-lg-7" style="margin-top: 5px; margin-bottom: 20px;">
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <!-- First Slide -->
+                            <div class="carousel-item active">
+                                <img src="../static/images/hero3.jpg" class="d-block w-100" alt="Slide 1">
+                            </div>
+                            <!-- Second Slide -->
+                           <div class="carousel-item">
+                                <img src="../static/images/gam2.png" class="d-block w-100" alt="Slide 2">
+			 </div> 
+                            <div class="carousel-item">
+                                <img src="../static/images/mic4.avif" class="d-block w-100" alt="Slide 2">
+                           </div>
+                            <div class="carousel-item">
+                                <img src="../static/images/hero4.png" class="d-block w-100" alt="Slide 2">
+			    </div>
+                            <!-- Add more slides as needed -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+
+ <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Provided HTML and CSS code -->
+                <style> 
+                    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); 
+                    .reveal-container { 
+                        display: inline-block; 
+                        overflow: hidden; 
+                        white-space: nowrap; 
+                        max-height: 220px; 
+                    } 
+                    .reveal-container div:first-of-type { 
+                        animation: appear 6s infinite; 
+                    } 
+                    .reveal-container div:last-of-type { 
+                        animation: reveal 6s infinite; 
+                    } 
+                    .reveal-container div:last-of-type span { 
+                        font-size: 33px; 
+                        color: #007000; 
+                        animation: slide 6s infinite; 
+                    } 
+                    @keyframes appear { 
+                        0%{opacity: 0;} 
+                        20%{opacity: 1;} 
+                        80%{opacity: 1;} 
+                        100%{opacity: 0;} 
+                    } 
+                    @keyframes slide { 
+                        0%{margin-left:-800px;} 
+                        20%{margin-left:-800px;} 
+                        35%{margin-left:0px;} 
+                        100%{margin-left:0px;} 
+                    } 
+                    @keyframes reveal { 
+                        0%{opacity: 0; width: 0px;} 
+                        20%{opacity: 1; width: 0px;} 
+                        30%{width: 655px;} 
+                        80%{opacity: 1;} 
+                        100%{opacity: 0; width: 650px;} 
+                    } 
+                </style> 
+                
+                <div class="reveal-container">
+                    <div style=" color: black; font-weight: bold; font-size: 26px;">YasiCom.</div> 
+                    <div> 
+                        <span>Discover exclusive deals...</span> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="container-fluid" style="background: #fafafa; padding: 100px 10px 100px 85px;">
+    {% if products %}
+        {% for i in range(0, length, 4) %}
+            <div class="row">
+                {% for product in products[i:i+4] %}
+                    <div class="col-md-3 col-6">
+			    <div class="product" style="margin-right: 70px; margin-bottom: 70px;">
+                            <!-- Set a fixed height for the image container -->
+                            <div style="height: 100%; overflow: hidden;margin-bottom: 10px;">
+                                <!-- Apply object-fit to control image resizing -->
+				<a href="products/{{ product.product_id }}">
+                                <img src="{{ product.cover }}" alt="{{ product.name }} Image" style="max-width: 100%; height: 100%; object-fit: cover; margin-bottom: 12px;">
+			    </a>
+			    </div>
+			    <div>
+                            <span style="font-weight: bold; font-size: 20px;">{{ product.name }}</span>
+			    </div>
+
+			        <span style="color: red; font-weight: bold; font-size: 20px;">Now  <h5 style="display: inline; color: black;">${{ product.cost }}</h5></span>
+			     <h5 style="text-decoration: line-through">${{ product.cost * 2 }}</h5>
+
+<!--
+			     <span style="color: red; font-weight: bold; font-size: 20">Now:</span>
+			     <h5>${{ product.cost }}</h5>  -->
+			    </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+
+{% endblock %}
+

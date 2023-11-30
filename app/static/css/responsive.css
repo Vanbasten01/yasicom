@@ -1,0 +1,44 @@
+/* responsive.css */
+
+@media screen and (max-width: 768px) {
+  .col-lg-6.col-md-6 {
+    padding: 10px;
+    background-color: #228B022;
+  }
+
+  .header__menu {
+    list-style: none;
+    padding: 0;
+  }
+
+  .header__menu ul {
+    margin: 0;
+  }
+
+  .header__menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .header__menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .header__menu a:hover {
+    color: #333;
+  }
+
+  .header__nav__option {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .header__menu li {
+    margin-right: 0;
+  }
+}
+

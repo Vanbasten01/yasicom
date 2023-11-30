@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+	 <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <style>
+        
+
+ .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(150%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+
+
+		  /* Add any additional styles here */
+        .thumbnail {
+            max-width: 60%;
+            height: auto;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #main-photo {
+            max-width: 100%;
+	    padding: 20px;
+            /*eight: ;*/
+       }
+
+
+
+	.nav-item a.nav-link {
+    color: black; /* Set the default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+  }
+
+		 @media (max-width: 786px) {
+        .thumbnail-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+    }
+
+		 @media screen and (max-width: 768px) {
+			 .thumbnail-container {
+				 margin-top : -200px;
+			 }
+			 .col-md-3 {
+				 margin-top: 0;
+			 }
+
+		 }
+			
+    </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header_top" style="background-color: #c4ee9d; padding: 10px; margin-bottom: 40px;">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="marquee-container">
+          <p class="marquee-content" style="margin: 0; color: #009000; font-size: 20px; font-weight: bold;">
+            Free shipping, 30-day return or refund guarantee. Free shipping, 30-day return or refund guarantee.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Thumbnails Column -->
+            <div class="col-md-2">
+
+                <div class="thumbnail-container" style="margin-top: 25px;">
+
+                    <div style="border: 0.5px solid #009000; padding: 10px; display: flex; align-items: center; justify-content: center;">
+                        <img class="thumbnail" src="../{{ product.cover }}" alt="Cover Photo" onclick="showPhoto('../{{ product.cover }}')">
+                    </div>
+
+                    <div style="border: 0.5px solid #009000; padding: 10px; display: flex; align-items: center; justify-content: center;">
+                        <img class="thumbnail" src="../{{ product.photo1 }}" alt="Photo 1" onclick="showPhoto('../{{ product.photo1 }}')">
+                    </div>
+
+                    <div style="border: 0.5px solid #009000; padding: 10px; display: flex; align-items: center; justify-content: center;">
+                        <img class="thumbnail" src="../{{ product.photo2 }}" alt="Photo 2" onclick="showPhoto('../{{ product.photo2 }}')">
+                    </div>
+
+                    <div style="border: 0.5px solid #009000; padding: 10px; display: flex; align-items: center; justify-content: center; max-height: 300px;">
+                        <img class="thumbnail" src="../{{ product.photo3 }}" alt="Photo 3" onclick="showPhoto('../{{ product.photo3 }}')">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-7"  style="margin-top: 25px">
+                <div style="border: 0.5px solid #009000; display: flex; align-items: center; justify-content: center;">
+                    <img id="main-photo" src="../{{ product.cover }}" alt="Main Photo">
+                </div>
+                <!-- Display Main Photo -->
+            </div>
+
+            <div class="col-md-3" style="margin-top: 25px;">
+                <h1>{{ product.name }}</h1>
+                <p style="font-size: 14px">{{ product.description }}</p>
+                <p style="font-weight: bold; font-size: 18px;">Price: ${{ product.cost }}</p>
+				 <!-- Styled dropdown for selecting the number of pieces -->
+				<label for="quantity" style="margin-bottom: 10px;">Select Quantity:</label>
+				<select id="quantity" name="quantity" class="form-select" style="font-size: 18px; padding: 8px;" required>
+					<option value="" disabled selected>Select quantity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<!-- Add more options as needed -->
+				 </select>
+            </div>
+
+        </div>
+
+	   <button id="checkoutButton" class="btn" style="background-color: #009000; margin-bottom: 30px; color: white; font-size: 20px; font-weight: bold;">Place Order</button>
+
+
+    </div>
+</section>
+
+
+
+  <footer class="footer" style="padding: 30px 0;">
+    <div class="container">
+      <div class="row">
+        <!-- Your existing footer content -->
+        <!-- ... -->
+		 <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                    </div>
+                    <p>Your go-to store for the latest electronics and laptops - YasiCom.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>Categories</h6>
+                    <ul>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Audio Devices</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>Customer Support</h6>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                    <h6>Newsletter</h6>
+                    <div class="footer__newsletter">
+                        <p>Stay updated on the latest arrivals, tech trends, and exclusive deals from YasiCom!</p>
+                        <form action="#">
+                            <input type="text" placeholder="Your email">
+							<button type="submit">
+								<img src="../static/images/letter.png" alt="Submit">
+							</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+</body>
+
+
+<script>
+    document.getElementById("checkoutButton").addEventListener('click', function() {
+        var quantity = document.getElementById('quantity').value || 1;
+        window.location.href = '/checkout?product_id={{ product.product_id }}&quantity=' + quantity;
+    });
+</script>
+
+
+
+    <script>
+        function showPhoto(photoUrl) {
+            document.getElementById('main-photo').src = photoUrl;
+        }
+    </script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<!-- Jquery -->
+  <script src="../static/js/jquery-3.7.1.js"></script>
+  <!-- Owl Carousel JS from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="../static/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="../static/js/script.js"></script>
+</html>

@@ -1,0 +1,37 @@
+.offcanvas-menu-overlay {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.7);
+		content: "";
+		z-index: 98;
+		-webkit-transition: all, 0.5s;
+		-o-transition: all, 0.5s;
+		transition: all, 0.5s;
+		visibility: hidden;
+	}
+.offcanvas-menu-overlay.active {
+		visibility: visible;
+	}
+.offcanvas-menu-wrapper {
+		position: fixed;
+		left: -300px;
+		width: 300px;
+		height: 100%;
+		background: #ffffff;
+		padding: 50px 20px 30px 30px;
+		display: block;
+		z-index: 99;
+		overflow-y: auto;
+		-webkit-transition: all, 0.5s;
+		-o-transition: all, 0.5s;
+		transition: all, 0.5s;
+		opacity: 0;
+	}
+	.offcanvas-menu-wrapper.active {
+		opacity: 1;
+		left: 0;
+	}
+
