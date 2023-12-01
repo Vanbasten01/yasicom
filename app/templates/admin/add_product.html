@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <style>
+	body {
+        zoom: 0.6;
+	}
+
+
         .sidebar {
             position: fixed;
             top: 0;
@@ -35,7 +40,8 @@
     color: white;
   }
 
-
+  
+     
         @media (max-width: 767.98px) {
             .sidebar {
                 top: 11.5rem;
@@ -139,7 +145,7 @@
 
 			<!-- Add Product -code -->
 
-
+<!--
 <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4" style="transition: background-color 0.3s ease;background-color: #009000;">
 
 
@@ -147,7 +153,6 @@
 		<div class="app-content pt-3 p-md-3 p-lg-4">
 			<div class="container-xl">
 		<div class="app-card app-card-settings shadow-sm p-4">
-			<!-- Flash Message Block -->
 			<div class="text-center" style="font-weight: bold; font-size: 18px;">
 				{% with message = get_flashed_messages() %}
 				{% if message %}
@@ -165,9 +170,9 @@
                 <input type="text" id="product_name" name="product_name" class="form-control" style="font-size: 22px" required>
             </div>
             <div class="form-group">
-                <label for="cover" style="color: white; font-weight: bold;font-size: 22px">Cover Photo:</label>
+                <label for="cover" style="color: white; font-weight: bold;font-size: 22px;">Cover Photo:</label>
 
-                <input type="file" id="cover" name="cover" class="form-control" style="font-size: 22px" required>
+                <input type="file" id="cover" name="cover" class="form-control" style="font-size: 22px;" required>
             </div>
             <div class="form-group">
                 <label for="photo1" style="color: white; font-weight: bold;font-size: 22px">Photo 1:</label>
@@ -198,7 +203,114 @@
 </div>
 </div>
 </main>
+-->
 
+
+
+<main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4" style="transition: background-color 0.3s ease;background-color: #009000;">
+
+    <div class="app-wrapper">
+
+        <div class="app-content pt-3 p-md-3 p-lg-4">
+
+            <div class="container-xl">
+
+                <div class="app-card app-card-settings shadow-sm p-4">
+
+                    <div class="container">
+
+                        <!-- Flash Message Block -->
+
+                        <div class="text-center" style="font-weight: bold; font-size: 18px;">
+
+                            {% with message = get_flashed_messages() %}
+
+                            {% if message %}
+
+                            <div class="alert alert-success">
+
+                                {{ message }}
+
+                            </div>
+
+                            {% endif %}
+
+                            {% endwith %}
+
+                        </div>
+
+                        <h2 class="page-title" style="color: white;">Add New Product</h2>
+
+                        <form method="POST" action="" enctype="multipart/form-data">
+
+                            <div class="form-group row">
+                                <label for="product_name" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Product Name:</label>
+                                <div class="col-12">
+                                    <input type="text" id="product_name" name="product_name" class="form-control" style="font-size: 20px;" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cover" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Cover Photo:</label>
+                                <div class="col-12">
+                                    <input type="file" id="cover" name="cover" class="form-control"style="font-size: 20px;" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="photo1" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Photo 1:</label>
+                                <div class="col-12">
+                                    <input type="file" id="photo1" name="photo1" class="form-control" style="font-size: 20px;" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="photo2" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Photo 2:</label>
+                                <div class="col-12">
+                                    <input type="file" id="photo2" name="photo2" class="form-control" style="font-size: 20px;" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="photo3" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Photo 3:</label>
+                                <div class="col-12">
+                                    <input type="file" id="photo3" name="photo3" class="form-control" style="font-size: 20px;" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="description" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Description:</label>
+                                <div class="col-12">
+                                    <textarea id="description" name="description" class="form-control" style="font-size: 20px;" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cost" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Cost:</label>
+                                <div class="col-12">
+                                    <input type="text" id="cost" name="cost" class="form-control" style="font-size: 20px;" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn" id="addpro" style="background-color: #c4ee9d; color: #006400; font-weight: bold; margin-top: 10px; font-size: 20px;">Add Product</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
 
 
 
