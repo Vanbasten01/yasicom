@@ -12,7 +12,7 @@ class Admin(UserMixin, db.Model):
         return f"<Admin {self.email}>"
 
     def set_pwd(self, pwd):
-        self.password_hash = generate_password_hash(pwd)
+        self.password_hash = generate_password_hash(pwd, method='sha256')
 
     def check_pwd(self, pwd):
         return check_password_hash(self.password_hash, pwd)

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <style>
 	body {
-        zoom: 0.6;
+        zoom: 0.7;
 	}
 
 
@@ -82,12 +82,23 @@
             </button>
         </div>
         <div class="col-12 col-md-4 col-lg-2">
-				    <form class="form-inline">
+	<!--<form class="form-inline">
         <div class="input-group">
             <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
             <button class="custom-search-btn" style="background-color: #006400" type="submit"></button>
         </div>
-    </form>
+	</form>-->
+
+<form class="form-inline">
+    <div class="input-group">
+        <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search" style="font-size: 20px">
+        
+        <!-- SVG search icon -->
+        <button class="custom-search-btn" type="submit" style="font-size: 20px">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" id="search"><path d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z"></path></svg>
+        </button>
+    </div>
+</form>
 
 		</div>		
         <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
@@ -240,44 +251,38 @@
                         </div>
 
                         <h2 class="page-title" style="color: white;">Add New Product</h2>
-
+                      <div class="form-group row">
                         <form method="POST" action="" enctype="multipart/form-data">
-
-                            <div class="form-group row">
+			<div style="overflow-x: auto;">
                                 <label for="product_name" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Product Name:</label>
                                 <div class="col-12">
                                     <input type="text" id="product_name" name="product_name" class="form-control" style="font-size: 20px;" required>
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <label for="cover" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Cover Photo:</label>
                                 <div class="col-12">
                                     <input type="file" id="cover" name="cover" class="form-control"style="font-size: 20px;" required>
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <label for="photo1" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Photo 1:</label>
                                 <div class="col-12">
                                     <input type="file" id="photo1" name="photo1" class="form-control" style="font-size: 20px;" required>
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <label for="photo2" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Photo 2:</label>
                                 <div class="col-12">
                                     <input type="file" id="photo2" name="photo2" class="form-control" style="font-size: 20px;" required>
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <label for="photo3" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Photo 3:</label>
                                 <div class="col-12">
                                     <input type="file" id="photo3" name="photo3" class="form-control" style="font-size: 20px;" required>
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <label for="description" class="col-12" style="color: white; font-weight: bold; font-size: 20px;">Description:</label>
                                 <div class="col-12">
@@ -297,8 +302,8 @@
                                     <button type="submit" class="btn" id="addpro" style="background-color: #c4ee9d; color: #006400; font-weight: bold; margin-top: 10px; font-size: 20px;">Add Product</button>
                                 </div>
                             </div>
-
                         </form>
+		  </div>
 
                     </div>
 
