@@ -3,9 +3,11 @@ from flask import render_template, request, flash
 from werkzeug.utils import secure_filename
 import os
 from app import db
+from flask_login import login_required
 
 
 @bp.route('/admin/edit_product/<product_id>', methods=['POST', 'GET'])
+@login_required
 def edit_product(product_id):
     from app.models.product import Product
     product = Product.query.get(product_id)

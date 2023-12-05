@@ -18,4 +18,4 @@ from app.routes.admin.edit_product import edit_product
 from app.routes.admin.delete_product import delete_product
 from app.routes.admin.view_orders import view_orders
 from app.routes.admin.view_order import view_order
-
+from app.routes.admin.stock import stock

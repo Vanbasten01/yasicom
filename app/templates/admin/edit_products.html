@@ -168,6 +168,8 @@
 
 					<button type="button" class="btn btn-success" style="width: 25%; margin-right: 24%;" onclick="editProduct({{ product.product_id }})">Edit</button>
 				<button type="button" class="btn btn-danger" style="width: 25%; margin-right: 24%;" onclick="deleteProduct({{ product.product_id }})">Delete</button>
+				<button type="button" class="btn btn-success" style="width: 25%; margin-right: 24%;" onclick="Stock({{ product.product_id }})">stock</button>
+
 			</td>
 		</tr>
 
@@ -187,6 +189,21 @@
 
 
 </main>
+
+<script>
+  function Stock(productId) {
+    // Construct the URL with the product ID
+    var editUrl = '/admin/stock/' + productId;
+    
+    // Navigate to the edit URL
+    window.location.href = editUrl;
+  }
+</script>
+
+
+
+
+
 
 <script>
 function deleteProduct(productId) {

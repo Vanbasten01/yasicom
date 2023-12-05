@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <style>
 	body {
-        zoom: 0.7;
+        zoom: 0.65;
 	}
 
         .sidebar {
@@ -141,7 +141,7 @@
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">
+				<a class="nav-link" href="{{ url_for('routes.logout') }}">
 							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                             <span class="ml-2">Log Out</span>
                           </a>
@@ -207,7 +207,7 @@
                 <label for="cost" style="color: white; font-weight: bold;font-size: 22px">Cost:</label>
 				<input type="text" id="cost" name="cost" class="form-control" style="font-size: 22px" value="{{ product.cost }}"required>
             </div>
-            <button type="submit" class="btn" id="addpro" style="background-color: #c4ee9d; color: #006400; font-weight: bold; margin-top: 10px;font-size: 22px">Add Product</button>
+            <button type="submit" class="btn" id="addpro" style="background-color: #c4ee9d; color: #006400; font-weight: bold; margin-top: 10px;font-size: 22px">Edit Product</button>
         </form>
     </div>
 </div>

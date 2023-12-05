@@ -156,52 +156,109 @@
             </nav>
 
 <!-- Edit Orders Table-->
-<main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4" style="transition: background-color 0.3s ease;background-color: white;">
+<main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4" style="transition: background-color 0.3s ease;background-color: #f8f9fa; padding: 10px;">
 
             <div class="app-card-body">
                 <form class="settings-form">
-                    <div class="mb-3" style="margin-bottom: -2px;">
+		     <div class="mb-3 row">
+    				<label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400;background-color: #dcdcdc; font-weight: bold;">Order ID :</label>
+    			<div class="col-sm-10">
+        		<input type="text" style="font-weight: bold; color: black;" class="form-control" name="first_name" value="{{ order.order_id }}" readonly>
+    			</div>
+	            </div>
+                    <div class="mb-3 row">
+                        <label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Date of Order :</label>
+    			<div class="col-sm-10">
+                             <input type="text"style="font-weight: bold; color: black;" class="form-control"name="first_name" value="{{ order.date }}" readonly>
+                        </div>
+		   </div>
+		     <div class="mb-3 row">
+    				<label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400;background-color: #dcdcdc; font-weight: bold;">First Name :</label>
+    			<div class="col-sm-10">
+        		<input type="text" style="font-weight: bold; color: black;" class="form-control" name="first_name" value="{{ order.first_name }}" readonly>
+    			</div>
+	            </div>
+
+                    <!--<div class="mb-3" style="margin-bottom: -2px;">
                         <label for="setting-input-1" class="form-label"style="color: #006400; font-weight: bold;">First Name</label>
                         <input type="text" style="font-weight: bold; color: black;" class="form-control"name="first_name" value="{{ order.first_name }}" readonly>
-                    </div>
-                    <div class="mb-3" style="margin-top: -10px;">
-                        <label for="setting-input-2" class="form-label" style="color: #006400; font-weight: bold;">Last Name</label>
-                        <input type="text"style="font-weight: bold; color: black;" class="form-control"name="first_name" value="{{ order.last_name }}" readonly>
-                    </div>
+		    </div>-->
+                    <div class="mb-3 row">
+                        <label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Last Name :</label>
+    			<div class="col-sm-10">
+                             <input type="text"style="font-weight: bold; color: black;" class="form-control"name="first_name" value="{{ order.last_name }}" readonly>
+                        </div>
+		   </div>
 
-                    <div class="mb-3"style="margin-top: -10px;">
-                        <label for="setting-input-2" class="form-label" style="color: #006400; font-weight: bold;">Country</label>
+                    <div class="mb-3 row">
+                        <label for="setting-input-" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Country :</label>
+		<div class="col-sm-10">
                         <input type="text" style="font-weight: bold; color: black;" class="form-control" name="country" value="{{ order.country }}" readonly>
-                    </div>
+		</div>    
+		</div>
 
 
-                    <div class="mb-3" style="margin-top: -10px;">
-                        <label for="setting-input-2" class="form-label" style="color: #006400; font-weight: bold;">Address</label>
+                    <div class="mb-3 row">
+                        <label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Address :</label>
+			<div class="col-sm-10">
                         <input type="text" style="font-weight: bold; color: black;" class="form-control" name="address" value="{{ order.adress }}" readonly>
-                    </div>
+			</div>
+			</div>
 
 
-                    <div class="mb-3" style="margin-top: -10px;">
-                        <label for="setting-input-2" class="form-label" style="color: #006400; font-weight: bold;">City</label>
+                    <div class="mb-3 row">
+                        <label for="setting-input-2" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">City :</label>
+			<div class="col-sm-10">
                         <input type="text" style="font-weight: bold; color: black;"class="form-control" name="city" value="{{ order.city }}" readonly>
                     </div>
+		    </div>
 
-                    <div class="mb-3"style="margin-top: -10px;">
-                        <label for="setting-input-2" class="form-label" style="color: #006400; font-weight: bold;">Poscode</label>
+                    <div class="mb-3 row">
+                        <label for="setting-input-2" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Poscode :</label>
+			<div class="col-sm-10">
                         <input type="text"style="font-weight: bold; color: black;" class="form-control" name="postcode" value="{{ order.postcode }}" readonly>
                     </div>
+		    </div>
 
 
-                    <div class="mb-3" style="margin-top: -10px;">
-                        <label for="setting-input-2" class="form-label" style="color: #006400; font-weight: bold;">Phone number</label>
+                    <div class="mb-3 row">
+                        <label for="setting-input-2" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Phone number :</label>
+			<div class="col-sm-10">
                         <input type="text"style="font-weight: bold; color: black;" class="form-control" name="phone" value="{{ order.phone_number }}" readonly>
                     </div>
+		    </div>
 
 
-                    <div class="mb-3" style="margin-top: -10px;">
-                        <label for="setting-input-3" class="form-label" style="color: #006400; font-weight: bold;">Email Address</label>
+                    <div class="mb-3 row">
+                        <label for="setting-input-3" class="col-sm-2 col-form-label" style="color: #006400; background-color: #dcdcdc;font-weight: bold;">Email Address :</label>
+			<div class="col-sm-10">
                         <input type="email"style="font-weight: bold; color: black;" class="form-control" name="email" value="{{ order.email }}" readonly>
                     </div>
+		    </div>
+		     <div class="mb-3 row">
+    				<label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400;background-color: #dcdcdc; font-weight: bold;">Product name :</label>
+    			<div class="col-sm-10">
+        		<input type="text" style="font-weight: bold; color: black;" class="form-control" name="first_name" value="{{ order.product_name }}" readonly>
+    			</div>
+	            </div>
+		     <div class="mb-3 row">
+    				<label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400;background-color: #dcdcdc; font-weight: bold;">Product Price :</label>
+    			<div class="col-sm-10">
+        		<input type="text" style="font-weight: bold; color: black;" class="form-control" name="first_name" value="{{ order.product_cost }}" readonly>
+    			</div>
+	            </div>
+		     <div class="mb-3 row">
+    				<label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400;background-color: #dcdcdc; font-weight: bold;">quantity :</label>
+    			<div class="col-sm-10">
+        		<input type="text" style="font-weight: bold; color: black;" class="form-control" name="first_name" value="{{ order.quantity }}" readonly>
+    			</div>
+	            </div>
+		     <div class="mb-3 row">
+    				<label for="setting-input-1" class="col-sm-2 col-form-label" style="color: #006400;background-color: #dcdcdc; font-weight: bold;">Total :</label>
+    			<div class="col-sm-10">
+        		<input type="text" style="font-weight: bold; color: black;" class="form-control" name="first_name" value="{{ order.total_cost }}" readonly>
+    			</div>
+	            </div>
 
                 </form>
             </div>

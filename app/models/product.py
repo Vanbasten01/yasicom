@@ -9,6 +9,6 @@ class Product(db.Model):
     photo1 = db.Column(db.String(255), nullable=False)
     photo2= db.Column(db.String(255), nullable=False)
     photo3= db.Column(db.String(255), nullable=False)
-
+    flag = db.Column(db.String(28), default="YES", nullable=False)
     def __repr__(self):
         return f"Product {self.name}"

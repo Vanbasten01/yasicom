@@ -5,6 +5,7 @@ from flask import render_template
 
 
 @bp.route('/admin/edit_products')
+@login_required
 def edit_products():
     from app.models.product import Product
     products = Product.query.order_by(desc(Product.product_id)).all()
