@@ -5,6 +5,38 @@
 
 {% block content %}
 
+<style>
+    body.enlarged {
+        overflow: hidden;
+    }
+    h4 {
+	    color: #006400;
+    }
+
+    .enlarged-image-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .enlarged-image-container img {
+        width: auto;
+        height: auto;
+        max-width: 90vw;
+        max-height: 90vh;
+        border: 2px solid #fff; /* Optional: Add a white border around the image */
+	zoom: 1.4;
+    }
+</style>
+
+
 <!-- About Section Begin -->
 <section class="breadcrumb-option" style="background-color:white;padding:20px; margin-top: -60px">
     <div class="container">
@@ -105,6 +137,145 @@
             </div>
         </div>
 
+<!-- Client Area - Loading Product Content Feature -->
+
+<div class="row mt-5">
+
+    <div class="col-lg-12 text-center">
+
+        <h4><strong>Client Area - Loading Product Content:</strong></h4>
+
+        <p style="font-size: 18px;">Feature: Displaying Products<br>
+        Explanation: In the client area, the web app loads product content from the database to showcase available items to users. Additionally, the home route (/home) is implemented to retrieve products and deliver a curated list of best deals, sorted from higher to lower prices, utilizing the index1.html template.<br>
+        Algorithm/Code Snippet: Utilizes Flask routes (/products and /home) to query and retrieve products from the database. The retrieved products are then rendered on the client-facing pages (products.html and index1.html), providing users with a dynamic and sorted view of available items.</p>
+
+        <!-- Placeholder Images in a Row -->
+	<div class="row">
+    <div class="col-lg-6">
+        <a href="javascript:void(0);" onclick="enlargeImage('../static/about/home2.png', 'Client Area - Product Content Feature Image 1')">
+            <img src="../static/about/home2.png" alt="Client Area - Product Content Feature Image 1" class="img-fluid mt-3">
+        </a>
+    </div>
+    <div class="col-lg-6">
+        <a href="javascript:void(0);" onclick="enlargeImage('../static/about/products2.png', 'Client Area - Product Content Feature Image 2')">
+            <img src="../static/about/products2.png" alt="Client Area - Product Content Feature Image 2" class="img-fluid mt-3">
+        </a>
+    </div>
+</div>
+<!--
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="../static/about/home.png"alt="Client Area - Product Content Feature Image 1" class="img-fluid mt-3">
+            </div>
+            <div class="col-lg-6">
+                <img src="../static/about/products.png" alt="Client Area - Product Content Feature Image 2" class="img-fluid mt-3">
+            </div>
+	</div>-->
+
+    </div>
+
+</div>
+
+
+
+
+	<!-- Admin Area - Add a Product Feature -->
+<div class="row mt-5">
+    <div class="col-lg-12 text-center">
+        <h4><strong>Admin Area - Add a Product:</strong></h4>
+        <p style="font-size: 18px;">Feature: Adding a Product<br>
+        Explanation: Admins can add a new product to the store.<br>
+        Algorithm/Code Snippet: Implements a form or route for admins to input product details and add a new product to the database.</p>
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/add_product2.png', 'Admin Area - Add a Product Feature Image')">
+        	<img src="../static/about/add_product2.png" alt="Admin Area - Add a Product Feature Image" class="img-fluid mt-3">
+   		</a>
+    </div>
+</div>
+
+
+<div class="row mt-5">
+    <div class="col-lg-12 text-center">
+        <h4><strong>Admin Area - Product Management:</strong></h4>
+        <p style="font-size: 18px;">Feature: Editing, Deleting, and Viewing Products<br>
+        Explanation: Admin can edit existing products (images, description, cost, product name), delete products, and view detailed information about each product.<br>
+        Algorithm/Code Snippet: Implements routes and functionality to manage products. This includes:
+        <ul>
+            <li>Editing existing products, allowing changes to images, description, cost, and product name.</li>
+            <li>Deleting products from the database.</li>
+            <li>Viewing detailed information about each product.</li>
+        </ul></p>
+	
+	  <div class="row">
+            <div class="col-lg-6">
+       		 <a href="javascript:void(0);" onclick="enlargeImage('../static/about/edit_products1.png', 'Admin Area - Product Management Feature Image 1')">
+			 <img src="../static/about/edit_products1.png" alt="Admin Area - Product Management Feature Image 1" class="img-fluid mt-3">
+		 </a>
+	    </div>
+            <div class="col-lg-6">
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/edit_product2.png', 'Admin Area - Product Management Feature Image 2')">
+                <img src="../static/about/edit_product2.png" alt="Admin Area - Product Management Feature Image 2" class="img-fluid mt-3">
+		</a>
+	    </div>
+        </div>
+</div>
+
+
+<!-- Admin Area - Stock Management Feature -->
+<div class="row mt-5">
+    <div class="col-lg-12 text-center">
+        <h4><strong>Admin Area - Stock Management:</strong></h4>
+        <p style="font-size: 18px;">Feature: Freezing/Unfreezing Stock<br>
+        Explanation: Admins can control the availability of a product by freezing or unfreezing its stock.<br>
+        Algorithm/Code Snippet: Incorporates a mechanism to update the stock status, making the product either available for purchase or temporarily unavailable.</p>
+        <!-- Placeholder Image -->
+        <a href="javascript:void(0);" onclick="enlargeImage('../static/about/stock1.png', 'Admin Area - Stock Management Feature Image')">
+        <img src="../static/about/stock1.png" alt="Admin Area - Stock Management Feature Image" class="img-fluid mt-3">
+    	</a>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Admin Area - Order Management Feature -->
+
+<div class="row mt-5">
+
+    <div class="col-lg-12 text-center">
+
+        <h4><strong>Admin Area - Order Management:</strong></h4>
+
+        <p style="font-size: 18px;">Feature: View Orders, View Order Details, Update Order Status<br>
+        Explanation: Admins can manage orders with functionalities to view a list of all orders, view detailed information for each order, and update the order status. The default status for an order is 'pending'.<br>
+        Algorithm/Code Snippet: Implements mechanisms to retrieve and display order information, including details and status updates.</p>
+
+        <!-- Placeholder Images in a Row -->
+        <div class="row">
+            <div class="col-lg-6">
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/view_orders2.png', 'Admin Area - Order Management Feature Image 1')">
+                <img src="../static/about/view_orders2.png" alt="Admin Area - Order Management Feature Image 1" class="img-fluid mt-3">
+		</a>
+	    </div>
+            <div class="col-lg-6">
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/view_order2.png', 'Admin Area - Order Management Feature Image 2')">
+                <img src="../static/about/view_order2.png" alt="Admin Area - Order Management Feature Image 2" class="img-fluid mt-3">
+		</a>
+	    </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
         <div class="row mt-5">
             <div class="col-lg-12 text-center">
                 <h4><strong>Project Timeline:</strong></h4>
@@ -132,9 +303,30 @@
 
 
 
+<script>
+    function enlargeImage(imageSrc, imageAlt) {
+        // Create a new image element
+        var enlargedImage = new Image();
+        enlargedImage.src = imageSrc;
+        enlargedImage.alt = imageAlt;
 
+        // Create a container element for the enlarged image
+        var modalContainer = document.createElement('div');
+        modalContainer.className = 'enlarged-image-container';
+        modalContainer.appendChild(enlargedImage);
 
-    
+        // Append the container to the body
+        document.body.appendChild(modalContainer);
 
+        // Add a click event to close the enlarged image when clicked
+        modalContainer.onclick = function () {
+            document.body.removeChild(modalContainer);
+            document.body.classList.remove('enlarged');
+        };
+
+        // Add a class to the body to hide overflow when the image is enlarged
+        document.body.classList.add('enlarged');
+    }
+</script>
 
 {% endblock %}
