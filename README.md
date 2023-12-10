@@ -16,8 +16,8 @@ This project is a full-stack web application designed for an online store. It en
   - Utilizes Flask routes (/products and /home) to query and retrieve products.
   - Renders products on client-facing pages (products.html and home.html).
 
-![Client Area - Product Content Feature Image 1](static/about/home2.png)
-![Client Area - Product Content Feature Image 2](static/about/products2.png)
+![Client Area - Product Content Feature Image 1](app/static/about/home2.png)
+![Client Area - Product Content Feature Image 2](app/static/about/products2.png)
 
 ### Admin Dashboard - Managing Store, Products, Orders, and Stock Feature
 
@@ -25,7 +25,7 @@ This project is a full-stack web application designed for an online store. It en
   - The admin dashboard provides tools for adding, editing, and removing products.
   - Admins can view and process orders and manage stock levels.
 
-![Admin Area - Add a Product Feature Image](static/about/dashboard.png)
+![Admin Area - Add a Product Feature Image](app/static/about/dashboard.png)
 
 ### Admin Area - Add a Product Feature
 
@@ -33,7 +33,7 @@ This project is a full-stack web application designed for an online store. It en
   - Admins can add a new product to the store.
   - Implements a form or route for admins to input product details and add a new product to the database.
 
-![Admin Area - Add a Product Feature Image](static/about/add_product2.png)
+![Admin Area - Add a Product Feature Image](app/static/about/add_product2.png)
 
 ### Admin Area - Product Management
 
@@ -41,8 +41,8 @@ This project is a full-stack web application designed for an online store. It en
   - Admins can edit existing products (images, description, cost, product name), delete products, and view detailed information about each product.
   - Implements routes and functionality to manage products.
 
-![Admin Area - Product Management Feature Image 1](static/about/edit_products1.png)
-![Admin Area - Product Management Feature Image 2](static/about/edit_product2.png)
+![Admin Area - Product Management Feature Image 1](app/static/about/edit_products1.png)
+![Admin Area - Product Management Feature Image 2](app/static/about/edit_product2.png)
 
 ### Admin Area - Stock Management Feature
 
@@ -50,7 +50,7 @@ This project is a full-stack web application designed for an online store. It en
   - Admins can control the availability of a product by freezing or unfreezing its stock.
   - Incorporates a mechanism to update the stock status.
 
-![Admin Area - Stock Management Feature Image](static/about/stock1.png)
+![Admin Area - Stock Management Feature Image](app/static/about/stock1.png)
 
 ### Admin Area - Order Management Feature
 
@@ -58,8 +58,8 @@ This project is a full-stack web application designed for an online store. It en
   - Admins can manage orders, view a list of all orders, view detailed information for each order, and update the order status.
   - Implements mechanisms to retrieve and display order information.
 
-![Admin Area - Order Management Feature Image 1](static/about/view_orders2.png)
-![Admin Area - Order Management Feature Image 2](static/about/view_order2.png)
+![Admin Area - Order Management Feature Image 1](app/static/about/view_orders2.png)
+![Admin Area - Order Management Feature Image 2](app/static/about/view_order2.png)
 
 ## Project Timeline
 
