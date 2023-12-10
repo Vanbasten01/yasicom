@@ -1,4 +1,4 @@
-{% extends "tst.html" %}
+{% extends "base.html" %}
 {% block title %}
     YasiCom.
 {% endblock title %}
@@ -22,36 +22,6 @@
 </section>
 <!-- Breadcrumb Section End -->
 
-
-<!--
-<div class="container-fluid" style="background: #fafafa; padding: 100px 10px 100px 85px;">
-    {% if products %}
-        {% for i in range(0, length, 4) %}
-            <div class="row">
-                {% for product in products[i:i+4] %}
-                    <div class="col-md-3 col-6">
-			    <div class="product" style="margin-right: 70px; margin-bottom: 70px;">
-                            <div style="height: 100%; overflow: hidden;margin-bottom: 10px;">
-				<a href="products/{{ product.product_id }}">
-                                <img src="{{ product.cover }}" alt="{{ product.name }} Image" style="max-width: 100%; object-fit: cover; margin-bottom: 12px;">
-				</a>
-			    </div>
-			    <div>
-                            <span style="font-weight: bold; font-size: 20px;">{{ product.name }}</span>
-			    </div>
-
-			        <span style="color: red; font-weight: bold; font-size: 20px;">Now  <h5 style="display: inline; color: black;">${{ product.cost }}</h5></span>
-			     <h5 style="text-decoration: line-through">${{ product.cost * 2 }}</h5>
-
-			    </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    {% endif %}
-</div>
-
--->
 
 
 <div class="container-fluid" style="background: #fafafa; padding: 100px 10px 100px 85px;">

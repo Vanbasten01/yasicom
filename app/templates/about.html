@@ -1,4 +1,4 @@
-{% extends "tst.html" %}
+{% extends "base.html" %}
 {% block title %}
     YasiCom.
 {% endblock title %}
@@ -54,41 +54,7 @@
         </div>
     </div>
 </section>
-<!--
-<section class="about spad" style="background-color: white;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="about__item" style="margin-top: 20px;">
-                    <h4 class="about__item-heading"><strong>Who We Are?</strong></h4>
-                    <p class="about__item-text"style="font-size: 18px;">Welcome to <strong class="brand-name">YasiCom</strong>, your ultimate destination for cutting-edge technology. As a leading provider of computers, laptops, and electronics, we pride ourselves on offering high-quality products and exceptional customer service.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="about__item" style="margin-top: 20px;">
-                    <h4 class="about__item-heading"><strong>What We Do?</strong></h4>
-                    <p class="about__item-text" style="font-size: 18px;">In this digital era where technology evolves rapidly, we are dedicated to providing the latest and most advanced computing solutions. Whether you're a professional seeking powerful laptops or a tech enthusiast looking for the newest gadgets, we've got you covered.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="about__item" style="margin-top: 20px;">
-                    <h4 class="about__item-heading"><strong>Why Choose Us?</strong></h4>
-                    <p class="about__item-text"style="font-size: 18px;">Choosing <strong class="brand-name">YasiCom</strong> means selecting a trusted partner in technology. Our commitment to quality, a wide range of products, and expert assistance ensures that you get the best value for your investment. Experience the future of electronics with us!</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="about__pic">
-                    <img src="../static/images/about.jpg" alt="" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
 
-<!-- About Section End -->
 
 <section class="about spad" style="background-color: white; padding: 50px 0;">
 
@@ -99,7 +65,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="about__item text-center mb-5">
                     <h4 class="about__item-heading"><strong>Who I Am?</strong></h4>
-		    <p class="about__item-text" style="font-size: 18px;">Welcome to  <strong class="brand-name">YasiCom</strong>, a showcase of my journey into the realms of full-stack engineering. YasiCom is not just a project; it's a testament to my passion for technology that was kindled at <a href="https://www.holbertonschool.com/" target="_blank">Holberton School</a>.</p>
+		    <p class="about__item-text" style="font-size: 18px;">Welcome to  <strong class="brand-name">YasiCom</strong>, a showcase of my journey into the realms of full-stack engineering. YasiCom is not just a project; it's a testament to my passion for technology that was kindled at <a href="https://www.holbertonschool.com/" style="color: #006400;" target="_blank">Holberton School</a>.</p>
 
                 </div>
             </div>
@@ -119,18 +85,7 @@
             </div>
 
         </div>
-<!--
-        <div class="row">
-
-            <div class="col-lg-12">
-                <div class="about__pic text-center">
-                    <img src="../static/images/about.jpg" alt="" class="img-fluid">
-                </div>
-            </div>
-
-        </div>
-
--->    <div class="row mt-5">
+        <div class="row mt-5">
             <div class="col-lg-12 text-center">
                 <h4><strong>About This Project:</strong></h4>
                 <p style="font-size: 18px;">Building web applications fascinated me long before I started my studies. YasiCom is not just a result of coursework; it's a realization of the dreams I harbored when wondering about the complexities of web development.</p>
@@ -147,34 +102,43 @@
 
         <p style="font-size: 18px;">Feature: Displaying Products<br>
         Explanation: In the client area, the web app loads product content from the database to showcase available items to users. Additionally, the home route (/home) is implemented to retrieve products and deliver a curated list of best deals, sorted from higher to lower prices, utilizing the index1.html template.<br>
-        Algorithm/Code Snippet: Utilizes Flask routes (/products and /home) to query and retrieve products from the database. The retrieved products are then rendered on the client-facing pages (products.html and index1.html), providing users with a dynamic and sorted view of available items.</p>
+        Algorithm/Code Snippet: Utilizes Flask routes (/products and /home) to query and retrieve products from the database. The retrieved products are then rendered on the client-facing pages (products.html and home.html), providing users with a dynamic and sorted view of available items.</p>
 
-        <!-- Placeholder Images in a Row -->
 	<div class="row">
-    <div class="col-lg-6">
-        <a href="javascript:void(0);" onclick="enlargeImage('../static/about/home2.png', 'Client Area - Product Content Feature Image 1')">
-            <img src="../static/about/home2.png" alt="Client Area - Product Content Feature Image 1" class="img-fluid mt-3">
-        </a>
-    </div>
-    <div class="col-lg-6">
-        <a href="javascript:void(0);" onclick="enlargeImage('../static/about/products2.png', 'Client Area - Product Content Feature Image 2')">
-            <img src="../static/about/products2.png" alt="Client Area - Product Content Feature Image 2" class="img-fluid mt-3">
-        </a>
-    </div>
-</div>
-<!--
-        <div class="row">
-            <div class="col-lg-6">
-                <img src="../static/about/home.png"alt="Client Area - Product Content Feature Image 1" class="img-fluid mt-3">
-            </div>
-            <div class="col-lg-6">
-                <img src="../static/about/products.png" alt="Client Area - Product Content Feature Image 2" class="img-fluid mt-3">
-            </div>
-	</div>-->
-
+   	    <div class="col-lg-6">
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/home2.png', 'Client Area - Product Content Feature Image 1')">
+            		<img src="../static/about/home2.png" alt="Client Area - Product Content Feature Image 1" class="img-fluid mt-3">
+        	</a>
+    	    </div>
+    	    <div class="col-lg-6">
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/products2.png', 'Client Area - Product Content Feature Image 2')">
+            		<img src="../static/about/products2.png" alt="Client Area - Product Content Feature Image 2" class="img-fluid mt-3">
+        	</a>
+   	    </div>
+	</div>
     </div>
 
 </div>
+
+<!-- Admin Dashboard - Managing Store, Products, Orders, and Stock Feature -->
+
+<div class="row mt-5">
+
+    <div class="col-lg-12 text-center">
+
+        <h4><strong>Admin Dashboard - Managing Store, Products, Orders, and Stock:</strong></h4>
+
+        <p style="font-size: 18px;">
+            Feature: Store Management<br>
+            Explanation: The admin dashboard provides a comprehensive toolset for managing the online store. It allows tha Admin to add, edit, and remove products, view and process orders, and manage stock levels.<br>
+            The admin dashboard provides a user-friendly interface for administrators to efficiently manage the store, product catalog, and order processing.
+        </p>
+        	<a href="javascript:void(0);" onclick="enlargeImage('../static/about/dashboard.png', 'Admin Area - Add a Product Feature Image')">
+        	<img src="../static/about/dashboard.png" alt="Admin Area - Add a Product Feature Image" class="img-fluid mt-3">
+   		</a>
+    </div>
+</div>
+
 
 
 
@@ -200,9 +164,9 @@
         Explanation: Admin can edit existing products (images, description, cost, product name), delete products, and view detailed information about each product.<br>
         Algorithm/Code Snippet: Implements routes and functionality to manage products. This includes:
         <ul>
-            <li>Editing existing products, allowing changes to images, description, cost, and product name.</li>
-            <li>Deleting products from the database.</li>
-            <li>Viewing detailed information about each product.</li>
+            <li style="font-weight: bold; font-size: 18px;">Editing existing products, allowing changes to images, description, cost, and product name.</li>
+            <li style="font-weight: bold; font-size: 18px;">Deleting products from the database.</li>
+            <li style="font-weight: bold; font-size: 18px;">Viewing detailed information about each product.</li>
         </ul></p>
 	
 	  <div class="row">
@@ -286,14 +250,14 @@
         <div class="row mt-5">
             <div class="col-lg-12 text-center">
                 <h4><strong>GitHub Repository:</strong></h4>
-                <p style="font-size: 18px;">Explore the code and the story behind it on my <a href="https://github.com/Vanbasten01/yasicom" target="_blank">GitHub Repository</a>.</p>
+                <p style="font-size: 18px;">Explore the code and the story behind it on my <a href="https://github.com/Vanbasten01/yasicom" style="color: #006400;"target="_blank">GitHub Repository</a>.</p>
             </div>
         </div>
 
         <div class="row mt-5">
             <div class="col-lg-12 text-center">
                 <h4><strong>Connect with Me:</strong></h4>
-                <p style="font-size: 18px;">For more projects and professional insights, connect with me on <a href="https://www.linkedin.com/in/fouad-yasin-76a489270/" target="_blank">LinkedIn</a>.</p>
+                <p style="font-size: 18px;">For more projects and professional insights, connect with me on <a href="https://www.linkedin.com/in/fouad-yasin-76a489270/" style="color: #006400;" target="_blank">LinkedIn</a>.</p>
             </div>
         </div>
 

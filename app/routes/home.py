@@ -11,4 +11,4 @@ def home():
     products = Product.query.order_by(desc(Product.cost)).all()
     length = len(products)
     print(length)
-    return render_template('index1.html', products=products, length=length)
+    return render_template('home.html', products=products, length=length)
