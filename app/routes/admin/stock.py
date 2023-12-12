@@ -1,8 +1,9 @@
 from app.routes import bp
 from flask import render_template, request, redirect, url_for
-
+from flask_login import login_required
 
 @bp.route('/admin/stock/<product_id>', methods=['GET', 'POST'])
+@login_required
 def stock(product_id):
     from app.models.product import Product
     product = Product.query.get_or_404(product_id)

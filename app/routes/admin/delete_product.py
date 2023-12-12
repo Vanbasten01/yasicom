@@ -4,6 +4,7 @@ from flask_login import login_required
 
 
 @bp.route('/admin/delete_product/<product_id>', methods=['POST'])
+@login_required
 def delete_product(product_id):
     from app import db
     from app.models.product import Product

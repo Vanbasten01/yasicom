@@ -101,7 +101,7 @@ This project is a full-stack web application designed for an online store. It en
 
 ##### **Algorithm/Code Snippet:**
 
-  - Utilizes Flask routes (/admin/view_orders, /admin/view_order) for order management.
+  - Utilizes Flask routes (/admin/view_orders, /admin/view_order/<order_id>) for order management.
   - Retrieves, displays, and updates order's status  in the backend.
 
 ![Admin Area - Order Management Feature Image 1](app/static/about/view_orders2.png)
